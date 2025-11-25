@@ -1,7 +1,7 @@
 <?php
 // transaksi.php
 session_start();
-require 'db.php';
+require 'config.php';
 include 'header.php';
 
 // add to cart

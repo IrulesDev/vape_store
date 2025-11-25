@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'config.php';
 if (!isset($_GET['id'])) { header('Location: items.php'); exit; }
 $id = $_GET['id'];
 $stmt = $mysqli->prepare("DELETE FROM items WHERE id_items=?");

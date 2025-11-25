@@ -1,13 +1,13 @@
 CREATE DATABASE vape_store;
 USE vape_store;
 
-CREATE TABLE kasir 
+CREATE TABLE kasir
 (
 	id_kasir VARCHAR(20) PRIMARY KEY,
     nama VARCHAR(50)
 );
 
-CREATE TABLE karyawan 
+CREATE TABLE karyawan
 (
 	id_karyawan VARCHAR(20) PRIMARY KEY,
     nik VARCHAR(30),
@@ -25,7 +25,7 @@ CREATE TABLE operator
     FOREIGN KEY (id_karyawan) REFERENCES karyawan(id_karyawan)
 );
 
-CREATE TABLE shift 
+CREATE TABLE shift
 (
 	id_shift VARCHAR(20) PRIMARY KEY,
     nama_shift VARCHAR(30),
@@ -48,27 +48,12 @@ CREATE TABLE jadwal
     FOREIGN KEY (id_kasir) REFERENCES kasir(id_kasir)
 );
 
-CREATE TABLE items 
-(
-	id_transaksi VARCHAR(20) PRIMARY KEY,
-    id_kasir VARCHAR(20),
-    id_operator VARCHAR(20),
-    tanggal DATETIME,
-    disc INT,
-    ppn INT,
-    total INT,
-    FOREIGN KEY (id_kasir) REFERENCES kasir(id_kasir),
-    FOREIGN KEY (id_operator) REFERENCES operator(id_operator)
-);
-
-DROP TABLE items;
-
 CREATE TABLE items
 (
 	id_items VARCHAR(20) PRIMARY KEY,
     nama_item VARCHAR(20),
     harga INT,
-    stock INT
+    stok INT
 );
 
 CREATE TABLE transaksi

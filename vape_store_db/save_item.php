@@ -1,6 +1,6 @@
 <?php
 // save_item.php
-require 'db.php';
+require 'config.php';
 
 $is_edit = ($_POST['is_edit'] ?? '0') === '1';
 $id = $_POST['id_items'] ?? '';

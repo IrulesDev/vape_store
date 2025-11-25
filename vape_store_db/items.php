@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'config.php';
 include 'header.php';
 
 // handle edit mode (optional read)
